@@ -2,7 +2,7 @@
   "name": "node-js-restfullapi",
   "version": "1.0.0",
   "description": "NodeJs-RestFullApi",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "test": "jest -i"

@@ -7,3 +7,5 @@ DESCRIBE contacts;
 DESCRIBE addresses;
 
 SELECT * FROM _prisma_migrations;
+
+SELECT * FROM users;

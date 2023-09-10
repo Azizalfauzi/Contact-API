@@ -52,6 +52,7 @@ const update = async (req, res, next) => {
 const logout = async (req, res, next) => {
   try {
     await userService.logout(req.user.username);
+    console.info("hello world");
     res.status(200).json({
       data: "Ok",
     });

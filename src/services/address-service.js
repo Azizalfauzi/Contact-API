@@ -4,8 +4,8 @@ import {
   createAddressValidation,
   getAddressValidation,
   updateAddressValidation,
-} from "../validation/address-validation";
-import { getContactValidation } from "../validation/contact-validation";
+} from "../validation/address-validation.js";
+import { getContactValidation } from "../validation/contact-validation.js";
 import { validate } from "../validation/validation.js";
 
 const checkContatcMustExist = async (user, contactId) => {

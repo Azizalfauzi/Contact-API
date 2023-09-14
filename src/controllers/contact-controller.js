@@ -33,6 +33,7 @@ const update = async (req, res, next) => {
     const contactId = req.params.contactId;
     const request = req.body;
     request.id = contactId;
+
     const result = await contactService.update(user, request);
     res.status(200).json({
       data: result,

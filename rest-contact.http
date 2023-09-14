@@ -1,0 +1,45 @@
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+{
+    "first_name":"Betta",
+    "last_name":"Adi",
+    "email":"betta@gmail.com",
+    "phone":"456654"
+}
+
+###
+
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+
+###
+GET http://localhost:3000/api/contacts/541
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+
+### 
+PUT http://localhost:3000/api/contacts/541
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+{
+    "first_name":"Indah",
+    "last_name":"Asri",
+    "email":"indah@gmail.com",
+    "phone":"21212"
+}
+
+### 
+DELETE http://localhost:3000/api/contacts/541
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666

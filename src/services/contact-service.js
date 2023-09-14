@@ -49,7 +49,8 @@ const get = async (user, request) => {
 
 const update = async (user, request) => {
   const contact = validate(updateContactValidation, request);
-  const totalContactInDatabase = prismaClient.contact.count({
+
+  const totalContactInDatabase = await prismaClient.contact.count({
     where: {
       username: user.username,
       id: contact.id,
@@ -57,7 +58,7 @@ const update = async (user, request) => {
   });
 
   if (totalContactInDatabase !== 1) {
-    throw new ResponseError(404, "Contact is not found");
+    throw new ResponseError(404, "contact is not found");
   }
 
   return prismaClient.contact.update({
@@ -107,7 +108,7 @@ const search = async (user, request) => {
 
   const skip = (request.page - 1) * request.size;
   const filter = [];
-  
+
   filter.push({
     username: user.username,
   });

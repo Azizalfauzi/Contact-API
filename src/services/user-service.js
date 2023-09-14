@@ -13,14 +13,14 @@ import { v4 as uuid } from "uuid";
 const register = async (request) => {
   const user = validate(registerUserValidation, request);
 
-  const isCountUser = await prismaClient.user.count({
+  const countUser = await prismaClient.user.count({
     where: {
       username: user.username,
     },
   });
 
-  if (isCountUser === 1) {
-    throw new ResponseError(400, "Username already exist");
+  if (countUser === 1) {
+    throw new ResponseError(400, "Username already exists");
   }
 
   user.password = await bcrypt.hash(user.password, 10);

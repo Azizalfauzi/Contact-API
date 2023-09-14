@@ -1,0 +1,46 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+
+{
+    "username":"zuha",
+    "password":"rahasia",
+    "name":"Aziz"
+}
+
+### 
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username":"zuha",
+    "password":"rahasia"
+}
+
+### 9be15cec-6cff-41d7-9d8f-9aa71f596936
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 9be15cec-6cff-41d7-9d8f-9aa71f596936
+
+###
+
+PATCH  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 9be15cec-6cff-41d7-9d8f-9aa71f596936
+
+{
+    "name":"Aziz Alfa"
+}
+
+###
+
+DELETE  http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 9be15cec-6cff-41d7-9d8f-9aa71f596936

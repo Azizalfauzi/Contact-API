@@ -1,0 +1,44 @@
+POST http://localhost:3000/api/contacts/539/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+{
+    "street":"Jalan Bromo",
+    "city":"Kediri",
+    "province":"Jawa Timur",
+    "country":"Indonesia",
+    "postal_code":"4321"
+}
+
+### List addresses
+GET http://localhost:3000/api/contacts/539/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+### Get addresses
+GET http://localhost:3000/api/contacts/539/addresses/87
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+### Update addresses
+PUT http://localhost:3000/api/contacts/539/addresses/87
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
+
+{
+    "street":"Jalan Waren",
+    "city":"TulungAgung",
+    "province":"Jawa Timur",
+    "country":"Indonesia",
+    "postal_code":"1122"
+}
+
+### Delete addresses
+DELETE http://localhost:3000/api/contacts/539/addresses/87
+Content-Type: application/json
+Accept: application/json
+Authorization: f394f72a-58e3-4a3d-92b2-94b71df1b666
